@@ -10,16 +10,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55b7723-2194-4253-9f18-ce549c0d865c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/front/procarchivos/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/procarchivos/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/procarchivos/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/procarchivos/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_4_11_5_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/CargoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/EmpleadoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/EmpresaEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/NominaArchivoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/NominaEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/PilaEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/SolicitudEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/model/TipoDocumentoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/util/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/UbosqueIncAPI_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/UbosqueIncAPI_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UbosqueIncAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UbosqueIncAPI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/procarchivos/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/procarchivos/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/procarchivos/src/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/procarchivos/src/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/procarchivos/src/uploadFile/UploadFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/procarchivos/src/uploadFile/UploadFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ubosque/api/ubosqueapi/HelloResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ubosque/api/ubosqueapi/HelloResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="hibernate-configuration-5.2" />
+        <option value="hibernate-main-5.2" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,13 +70,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="c6e7d007-bca4-4ef8-a8d9-6289d4eeeb5d" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.ubosque" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="UbosqueIncAPI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebLogic 14.1.1.0.0" type="WebLogic Instance" factoryName="Local" APPLICATION_SERVER_NAME="WebLogic 14.1.1.0.0" ALTERNATIVE_JRE_ENABLED="false">
       <option name="PORT" value="7001" />
       <deployment>
@@ -128,6 +171,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -141,6 +189,7 @@
       <workItem from="1634800239950" duration="54000" />
       <workItem from="1634871621538" duration="2938000" />
       <workItem from="1636488474522" duration="616000" />
+      <workItem from="1636770244093" duration="6217000" />
     </task>
     <servers />
   </component>

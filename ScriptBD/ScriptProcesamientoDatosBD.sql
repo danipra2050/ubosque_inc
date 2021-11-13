@@ -1,3 +1,5 @@
+USE procesadatos;
+
 CREATE TABLE tipoDocumento(
 	idTipoDoc int PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	nombreTipoDoc varchar(50) NOT null,
@@ -36,8 +38,14 @@ CREATE TABLE empleado(
 
 CREATE TABLE nominaArchivo(
 	idNomina bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    referencia varchar(50) NOT NULL,
+    solicitud varchar(100) NOT NULL,
 	documentoEmpresa bigint NOT NULL,
-	documentoEmpleado bigint NOT NULL,
+    razonSocial varchar(100) NOT NULL,
+	tipoDocumento varchar(10) NOT NULL,
+    documentoEmpleado bigint NOT NULL,
+    nombreEmpleado varchar(100) NOT NULL,
+    cargo varchar(50) NOT NULL,
 	anio int NOT NULL,
 	mes int NOT NULL,
 	salario bigint NOT NULL,
@@ -58,4 +66,31 @@ CREATE TABLE nominaArchivo(
 	primaVacacionesCF bigint,
 	incapacidades bigint,
 	fechaCargue timestamp DEFAULT current_timestamp
+);
+
+CREATE TABLE pila(
+	idPila int PRIMARY KEY AUTO_INCREMENT,
+    documentoEmpresa bigint NOT NULL,
+    documentoEmpleado bigint NOT NULL,
+    anio int NOT NULL,
+    mes int NOT NULL,
+    ibc bigint NOT NULL,
+    saludPagar bigint NOT NULL,
+    saludPagada bigint NOT NULL,
+    saludTarifa int NOT NULL,
+    pensionPagar bigint NOT NULL,
+    pensionPagada bigint NOT NULL,
+    pensionTarifa int NOT NULL,
+    FOREIGN KEY (documentoEmpresa) REFERENCES empresa(documentoEmpresa),
+    FOREIGN KEY (documentoEmpleado) REFERENCES empleado(documentoEmpleado)
+);
+
+CREATE TABLE nomina(
+	idNomina int PRIMARY KEY AUTO_INCREMENT,
+    documento bigint NOT NULL,
+    ibc bigint,
+    ingresoTotal bigint,
+    salud bigint,
+    pension bigint,
+    arl bigint
 );

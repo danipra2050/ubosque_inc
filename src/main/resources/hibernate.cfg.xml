@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">
+            jdbc:mysql://database-2.cvtxadfj2kuk.us-east-1.rds.amazonaws.com:3306/procesadatos
+        </property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">admin</property>
+        <property name="connection.password">Universidad1103</property>
+        <mapping class="com.ubosque.model.CargoEntity"/>
+        <mapping class="com.ubosque.model.EmpleadoEntity"/>
+        <mapping class="com.ubosque.model.EmpresaEntity"/>
+        <mapping class="com.ubosque.model.NominaEntity"/>
+        <mapping class="com.ubosque.model.NominaArchivoEntity"/>
+        <mapping class="com.ubosque.model.PilaEntity"/>
+        <mapping class="com.ubosque.model.SolicitudEntity"/>
+        <mapping class="com.ubosque.model.TipoDocumentoEntity"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
