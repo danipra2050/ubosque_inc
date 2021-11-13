@@ -2,6 +2,7 @@ import React from "react";
 import Fade from 'react-reveal';
 import ParticlesBg from "particles-bg";
 import UploadFile from "../uploadFile/UploadFile";
+import Login from "../login/Login.js";
 
 function Header(){
 
@@ -19,7 +20,7 @@ function Header(){
             </nav>
             <div className="row banner">
                 <div className="banner-text">
-                    
+                    <UploadFile />
                 </div>
             </div>            
         </header>
