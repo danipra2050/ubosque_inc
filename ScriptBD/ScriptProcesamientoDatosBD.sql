@@ -1,3 +1,4 @@
+CREATE DATABASE procesadatos;
 USE procesadatos;
 
 CREATE TABLE tipoDocumento(
