@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55b7723-2194-4253-9f18-ce549c0d865c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_boot_starter_security_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_5_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_Data_JPA_2_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_Security_5_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_Web_Services_2_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/UbosqueIncAPI_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/UbosqueIncAPI_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScriptBD/ScriptProcesamientoDatosBD.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptBD/ScriptProcesamientoDatosBD.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UbosqueIncAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UbosqueIncAPI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/procarchivos/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/procarchivos/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +179,7 @@
       <workItem from="1634871621538" duration="2938000" />
       <workItem from="1636488474522" duration="616000" />
       <workItem from="1636770244093" duration="8224000" />
-      <workItem from="1637808802000" duration="3387000" />
+      <workItem from="1637808802000" duration="5885000" />
     </task>
     <servers />
   </component>
