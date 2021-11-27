@@ -1,12 +1,8 @@
 import React from "react";
-import Fade from 'react-reveal';
 import ParticlesBg from "particles-bg";
-import UploadFile from "../uploadFile/UploadFile";
 import Login from "../login/Login.js";
 
-function Header(){
-
-    
+function Header(){    
 
     return(
         <header id="home">

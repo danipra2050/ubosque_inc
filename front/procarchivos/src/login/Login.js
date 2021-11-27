@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade, Slide } from "react-reveal";
+import { Navigate } from 'react-router-dom';
 
 function Login(){
 
@@ -15,16 +16,18 @@ function Login(){
         var url = "http://localhost:8080/api/login";
         
         fetch(url,{
-            headers: new Headers({
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }),
-            mode: 'no-cors',
+            mode: 'cors',
             method: "POST",
             body: JSON.stringify(info)
-        }).then(res => res.json())
-            //.catch(error => console.log('Error: ', error))
-            .then(response => console.log(response));
+        })
+        .then(data => data.json())
+        .then(response => {
+            if(response.code == "200"){
+                <Navigate to="/file" />
+            }else{
+                alert("Valide las credenciales");
+            }
+        });
     }
 
     return(

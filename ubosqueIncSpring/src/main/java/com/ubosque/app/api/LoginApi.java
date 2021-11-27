@@ -3,6 +3,7 @@ package com.ubosque.app.api;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ubosque.app.model.LoginRequest;
+import com.ubosque.app.model.Response;
 import com.ubosque.app.model.UsuarioAccesoEntity;
 import com.ubosque.app.service.ILogin;
 import io.jsonwebtoken.Jwts;
@@ -10,6 +11,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.springframework.http.MediaType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +28,6 @@ public class LoginApi{
     @Autowired
     private ILogin iLogin;
 
-    private JSONObject jsonObject;
     private ObjectMapper objectMapper;
 
     @GetMapping("/hello")
@@ -34,17 +35,23 @@ public class LoginApi{
         return "Hello " + name + "...!!!";
     }
 
-    @PostMapping("/login")
-    //@RequestParam("usuario") Long usuario, @RequestParam("contrasena") String contrasena
-    public UsuarioAccesoEntity login(@RequestBody String stringRequest) throws JsonProcessingException {
+    @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Response login(@RequestBody String stringRequest) throws JsonProcessingException {
         objectMapper = new ObjectMapper();
+        Response response = new Response();
         LoginRequest loginRequest = objectMapper.readValue(stringRequest, LoginRequest.class);
 
         UsuarioAccesoEntity usuarioAcceso = iLogin.busquedaUsuario(loginRequest.getUsuario(), loginRequest.getContrasena());
         if(usuarioAcceso != null){
             usuarioAcceso.setToken(getJWT(usuarioAcceso.getNombreUsuario(), usuarioAcceso.getContrasenaUsuario()));
+            response.setCode("200");
+            response.setMessage("Success");
+            response.setData(usuarioAcceso);
+        }else{
+            response.setCode("400");
+            response.setMessage("Data not found");
         }
-        return usuarioAcceso;
+        return response;
     }
 
     private String getJWT(String usuario, String contrasena){
