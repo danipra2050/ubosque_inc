@@ -21,9 +21,11 @@ CREATE TABLE cargo(
 
 CREATE TABLE empresa(
 	documentoEmpresa bigint PRIMARY KEY NOT NULL,
+    idTipoDoc int NOT NULL,
 	razonSocial varchar(100) NOT NULL,
 	direccionEmpresa varchar(100) NOT NULL,
-	activo SMALLINT NOT NULL
+	activo SMALLINT NOT NULL,
+    FOREIGN KEY (idTipoDocumento) REFERENCES tipoDocumento(idTipoDoc)
 );
 
 CREATE TABLE empleado(
@@ -37,20 +39,15 @@ CREATE TABLE empleado(
 	FOREIGN KEY (idCargo) REFERENCES cargo(idCargo)
 );
 
-CREATE TABLE nominaArchivo(
-	idNomina bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    referencia varchar(50) NOT NULL,
-    solicitud varchar(100) NOT NULL,
-	documentoEmpresa bigint NOT NULL,
-    razonSocial varchar(100) NOT NULL,
-	tipoDocumento varchar(10) NOT NULL,
-    documentoEmpleado bigint NOT NULL,
-    nombreEmpleado varchar(100) NOT NULL,
-    cargo varchar(50) NOT NULL,
-	anio int NOT NULL,
-	mes int NOT NULL,
-	salario bigint NOT NULL,
-	diasTrabajados int NOT NULL,
+CREATE TABLE infoNomina(
+	idNomina BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    referencia VARCHAR(50) NOT NULL,
+    idSolicitud INT NOT NULL,
+    documentoEmpresa BIGINT NOT NULL,
+    documentoEmpleado BIGINT NOT NULL,
+    anio int not null,
+    mes int not null,
+    diasTrabajados int NOT NULL,
 	diasIncapacidad int NOT NULL,
 	diasLicencia int NOT NULL,
 	totalDias int NOT NULL,
@@ -66,7 +63,11 @@ CREATE TABLE nominaArchivo(
 	bonoRetiro bigint,
 	primaVacacionesCF bigint,
 	incapacidades bigint,
-	fechaCargue timestamp DEFAULT current_timestamp
+	fechaCargue timestamp DEFAULT current_timestamp,
+    usuarioCargue BIGINT,
+    FOREIGN KEY (idSolicitud) REFERENCES solicitud(idSolicitud),
+    FOREIGN KEY (documentoEmpresa) REFERENCES empresa(documentoEmpresa),
+    FOREIGN KEY (documentoEmpleado) REFERENCES empleado(documentoEmpleado)
 );
 
 CREATE TABLE pila(
@@ -88,10 +89,13 @@ CREATE TABLE pila(
 
 CREATE TABLE nomina(
 	idNomina int PRIMARY KEY AUTO_INCREMENT,
-    documento bigint NOT NULL,
+    documentoEmpresa BIGINT,
+    documentoEmpleado BIGINT,
     ibc bigint,
     ingresoTotal bigint,
     salud bigint,
     pension bigint,
-    arl bigint
+    arl bigint,
+    FOREIGN KEY (documentoEmpresa) REFERENCES empresa(documentoEmpresa),
+    FOREIGN KEY (documentoEmpleado) REFERENCES empleado(documentoEmpleado)
 );

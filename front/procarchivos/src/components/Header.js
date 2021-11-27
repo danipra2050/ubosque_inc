@@ -20,7 +20,7 @@ function Header(){
             </nav>
             <div className="row banner">
                 <div className="banner-text">
-                    <UploadFile />
+                    <Login />
                 </div>
             </div>            
         </header>
