@@ -13,7 +13,7 @@ function Login(){
 
     function singin(event){
         event.preventDefault();
-        var url = "http://localhost:8080/api/login";
+        var url = "http://ubosquelogin-env.eba-3iqmbjfp.us-east-2.elasticbeanstalk.com/api/login";
         
         fetch(url,{
             mode: 'cors',
