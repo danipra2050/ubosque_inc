@@ -43,12 +43,13 @@ public class LoginApi{
 
         UsuarioAccesoEntity usuarioAcceso = iLogin.busquedaUsuario(loginRequest.getUsuario(), loginRequest.getContrasena());
         if(usuarioAcceso != null){
+            usuarioAcceso.setContrasenaUsuario(null);
             usuarioAcceso.setToken(getJWT(usuarioAcceso.getNombreUsuario(), usuarioAcceso.getContrasenaUsuario()));
             response.setCode("200");
             response.setMessage("Success");
             response.setData(usuarioAcceso);
         }else{
-            response.setCode("400");
+            response.setCode("404");
             response.setMessage("Data not found");
         }
         return response;

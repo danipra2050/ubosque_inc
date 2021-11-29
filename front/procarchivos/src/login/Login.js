@@ -23,7 +23,7 @@ function Login(){
         .then(data => data.json())
         .then(response => {
             if(response.code == "200"){
-                <Navigate to="/file" />
+                window.location.href = "/file";
             }else{
                 alert("Valide las credenciales");
             }
